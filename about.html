@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네비게이션 바</title>
+  <style>
+    body {
+  background-color: #Eff7f6;
+  color: #19362d
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      
+    }
+
+    /* 네비게이션 바 스타일 */
+    .navbar {
+      position: fixed; /* 화면 상단에 고정 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: transparent;
+      padding: 25px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #006064;
+      font-family: Arial, Helvetica, sans-serif
+    }
+
+    
+
+    /* 메뉴 스타일 */
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: clamp(16px, 5vw, 44px);
+    
+    }
+
+    .menu li {
+      display: inline;
+    }
+
+    .menu a {
+      color: #006064;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: clamp(14px, 3vw, 18px);
+    }
+
+    .menu a:hover {
+      color: #ff5ba8;
+    }
+
+    li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  color:#006064;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #006064;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    
+    /* 본문 내용 스타일 */
+    .content {
+      margin-top: 100px; /* 네비게이션 바 높이만큼 여백 */
+      padding: 30px;
+      text-align: center;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    a {
+    text-decoration: none; /* 링크 밑줄 없애기 */
+    color: inherit; /* 링크 색상을 부모 요소와 동일하게 유지 */
+}
+
+a:visited {
+    color: inherit; /* 방문한 링크 색상도 변경하지 않도록 */
+}
+
+table {
+  width: 50%; /* 테이블 가로 크기 */
+  margin: 0 auto;
+  border-collapse: collapse; /* 테두리 겹침 */
+}
+th, td {
+  border: 1px solid black; /* 테두리 */
+  padding: 10px; /* 셀 안쪽 여백 */
+  text-align: center; /* 텍스트 정렬 */
+  justify-content: space-between;
+}
+td {
+  
+}
+th {
+  background-color: #f4f4f4; /* 헤더 배경색 */
+}
+table img {
+    width: 100px;
+    height: 100px;
+  vertical-align: middle;
+}
+.footer {
+background-color: #Eff7f6;
+padding: 20px;
+height: 60x;
+margin-top: 110px;
+text-align: center;
+font-size: 14px;
+
+}
+
+    </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <h2><a href="index.html">Eio<br> Portfolio</a></h2>
+    <ul class="menu">
+        <li><a href="about.html">About</a></li>
+<li class="dropdown">
+    <a href="archive.html" class="dropbtn">Archive</a> 
+    <div class="dropdown-content">
+        <a href="illust.html">일러스트</a>
+        <a href="3grade.html">3학년</a>
+        <a href="2grade.html">2학년</a>
+        <a href="1grade.html">1학년</a>
+    </div>
+  </li>
+    </li>
+      <li><a href="gp.html">졸업프로젝트</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h1>About me</h1>
+    <p>소개</p><br>
+    <table>
+        <tr>
+            <th>카테고리</th>
+            <th>내용</th>
+        </tr>
+        <tr>
+            <td>디자인 툴</td>
+            <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1200px-Adobe_Photoshop_CC_icon.svg.png">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB2QAt8bUbxDBfi4_JeRrAjDpBj9JQ3MYElQ&s">
+                <img src="https://i.namu.wiki/i/1x3euO4Ieigx5B4n_6wTFyqlC5At_XwIbpg0sDcbsMyeWqA2uI4ih0U1FPj5aePKqZw73qLsn29vaCwLUmwpdA.webp">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA3SB1zUZQq3hvqFqV4tefQmL5EnfM9-I5bQ&s">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKY-DfL_8YjPX_hOLf3_vej8AAjH2VB4VJ1A&s">
+            </td>
+            </td>
+        </tr>
+        <tr>
+            <td>개발</td>
+            <td>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/800px-HTML5_logo_and_wordmark.svg.png"> 
+                <img src="https://i.namu.wiki/i/DLvI3H3jjaK2ONvOQZCzadfWeMkXkNRamQJr_O4oY7vah_ALG9oA6qqP-3DFbqs_fyUDHO7oIrtosaxe1jGX1A.svg">
+               
+        </tr>
+        <tr>
+            <td>음악 관련</td>
+            <td><img src="https://i.namu.wiki/i/drS4x5nILqRUfww_7xuBOHXR7QlPUcWHbK0fhtHlYlOXbXXU8Gxj5a2_meQ6a_ujq9Nq16pnwBPl4cawL5GAejQnSZqUYNVN1Si94kpixybr015cp9OHM87m1nOISsETH7vNzojN0BnFJlM1hBMqOw.webp" alt="ableton live">
+            </td>
+        </tr>
+
+        <tr>
+            <td>3d & UX/UI</td>
+            <td><img src="https://blog.kakaocdn.net/dn/b8OOBu/btsufmgnW4N/e6AF9A8mdADDCLJNi03lV0/img.png">
+            <img src="https://i.namu.wiki/i/LyadmBZA11Cd0dxOz4TpbFDP73JotAjBh0MTi1gCLZbGMXPTtJRynHbLtTywIbz8eoGGBEl8UYFWcsW2ET5EiQ.webp">
+            <img src="https://cdn.sanity.io/images/599r6htc/regionalized/5094051dac77593d0f0978bdcbabaf79e5bb855c-1080x1080.png?w=540&h=540&q=75&fit=max&auto=format">
+            </td>
+        </tr>
+    </table>
+  </div>
+  <div class="footer">
+    <p>&copy; 2025 Eio. All Rights Reserved.</p>
+</div>
+
+
+</body>
+</html>

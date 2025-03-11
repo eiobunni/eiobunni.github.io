@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네비게이션 바</title>
+  <style>
+    body {
+  background-color: #Eff7f6;
+  color: #19362d
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 네비게이션 바 스타일 */
+    .navbar {
+      position: fixed; /* 화면 상단에 고정 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: transparent;
+      padding: 25px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #006064;
+      font-family: Arial, Helvetica, sans-serif
+    }
+
+    
+
+    /* 메뉴 스타일 */
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: clamp(16px, 5vw, 44px);
+    
+    }
+
+    .menu li {
+      display: inline;
+    }
+
+    .menu a {
+      color: #006064;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: clamp(14px, 3vw, 18px);
+    }
+
+    .menu a:hover {
+      color: #ff5ba8;
+    }
+
+    li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    
+    /* 본문 내용 스타일 */
+    .content {
+      margin-top: 100px; /* 네비게이션 바 높이만큼 여백 */
+      padding: 30px;
+      text-align: center;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+
+.listup {
+    list-style: none;
+    background: none;
+    padding: 0px;
+    margin: 0 auto;
+    width: fit-content;  /* 내용에 맞게 너비 조정 */
+    display: flex;
+    flex-direction: column;  /* 리스트 항목이 수직으로 쌓이게 함 */
+    justify-content: flex-start;  /* 수평 중앙 정렬 */
+    align-items: center;  /* 수직 중앙 정렬 */
+    min-height: 100vh;  /* 화면 높이에 맞게 */
+    gap: 20px;
+
+}
+
+.listup ul {
+    list-style: none;  /* 글머리 기호 없애기 */
+    padding: 0;         /* padding 제거 */
+    margin: 0;          /* margin 제거 */
+}
+
+.listup li {
+    /* 항목들 사이에 10px 간격을 추가 */
+    margin: auto;
+    margin-bottom: 18px;
+    padding: 7px 2px;       /* 각 항목 위아래로 패딩을 추가할 수도 있음 */
+    width: 1000px;
+    height: 80px;
+    border: 2px solid #006064;
+    border-radius: 1px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center;
+
+    font-size: 20px; 
+    transition: background-color 0.3s ease;
+}
+
+.listup li:hover {
+    background-color:  #006064;  /* 마우스 오버시 색상 변경 */
+    color: #ffffff;  /* 텍스트 색도 바꿀 수 있습니다 */
+}
+
+.listup a {
+    text-decoration: none;
+    color: inherit;
+}
+a {
+    text-decoration: none; /* 링크 밑줄 없애기 */
+    color: inherit; /* 링크 색상을 부모 요소와 동일하게 유지 */
+}
+a:visited {
+    color: inherit; /* 방문한 링크 색상도 변경하지 않도록 */
+}
+img {
+  display: block;
+  margin: auto;
+  width: 60%; /* 크기 조절 (원하는 값으로 변경 가능) */
+  max-width: 1000px; /* 최대 크기 제한 */
+  height: auto; /* 비율 유지 */
+}
+    </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <h2><a href="index.html">Eio<br> Portfolio</a></h2>
+    <ul class="menu">
+        <li><a href="about.html">About</a></li>
+<li class="dropdown">
+    <a href="archive.html" class="dropbtn">Archive</a> 
+    <div class="dropdown-content">
+        <a href="illust.html">일러스트</a>
+        <a href="3grade.html">3학년</a>
+        <a href="2grade.html">2학년</a>
+        <a href="1grade.html">1학년</a>
+    </div>
+  </li>
+      <li><a href="gp.html">졸업프로젝트</a></li>
+      
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h1>2학년</h1>
+    <p>이곳에서는 2학년 기록들을 볼수있습니다</p><br><br><br><br><br><br>
+    <h1>Motion Graphic</h1>
+    <p>인터렉티브 미디어 디자인2</p><br><br><br><br><br><br>
+    <img src="img/2grade/motion1.jpg">
+    <img src="img/2grade/motion2.JPG">
+    
+  
+
+    
+  
+  <br><br><br><br><br><br>
+  <h1>Brand Design</h1>
+  <p>브랜드디자인</p>
+  <br><br><br><br><br><br>
+<img src="img/2grade/brand1.jpg">
+<img src="img/2grade/brand2.jpg">
+<img src="img/2grade/brand3.jpg">
+<img src="img/2grade/brand4.jpg">
+<img src="img/2grade/brand5.jpg">
+<img src="img/2grade/brand6.jpg">
+<img src="img/2grade/brand7.jpg">
+<img src="img/2grade/brand8.jpg">
+<img src="img/2grade/brand9.jpg">
+<img src="img/2grade/brand10.jpg">
+
+<br><br><br><br><br><br>
+<h1>Platform Animation</h1>
+  <p>플랫폼애니메이션</p>
+  <br><br><br><br><br><br>
+  <img src="img/2grade/anime.png">
+  <p><a href="https://www.instagram.com/necoloc0?igsh=b2Z6bWFhMHQ1YXZ0">
+    <br><br><br><br>애니메이션 비디오 보러가기: instgram</a></p><br><br><br><br><br>
+</div>
+
+</body>
+</html>
