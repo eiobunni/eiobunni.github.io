@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네비게이션 바</title>
+  <style>
+    body {
+  background-color: #Eff7f6;
+  text-align: center;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 네비게이션 바 스타일 */
+    .navbar {
+      position: fixed; /* 화면 상단에 고정 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #eff7f655;
+      padding: 25px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #006064;
+      font-family: Arial, Helvetica, sans-serif
+    }
+
+    
+
+    /* 메뉴 스타일 */
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: clamp(16px, 5vw, 44px);
+    
+    }
+
+    .menu li {
+      display: inline;
+    }
+
+    .menu a {
+      color: #006064;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: clamp(14px, 3vw, 18px);
+    }
+
+    .menu a:hover {
+      color: #ff5ba8;
+      text-decoration: none;
+    }
+
+
+    li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    
+    /* 본문 내용 스타일 */
+    .content {
+      margin-top: 100px; /* 네비게이션 바 높이만큼 여백 */
+      padding: 30px;
+      text-align: center;
+    }
+
+    h2 {
+        font-size: 28px;
+        text-decoration: none;
+        
+    }
+    p {
+        text-align: center; 
+        line-height: 1.8;
+    }
+    li {
+        text-align: center; 
+    }
+
+    img {
+  display: block;
+  margin: auto;
+  width: 50%; /* 크기 조절 (원하는 값으로 변경 가능) */
+  max-width: 400px; /* 최대 크기 제한 */
+  height: auto; /* 비율 유지 */
+}
+
+.flex-gallery {
+  display: flex;
+  flex-wrap: wrap; /* 화면 크기에 따라 줄 바꿈 */
+  justify-content: center; /* 중앙 정렬 */
+  gap: 8px;
+  padding: 20px;
+  
+}
+
+.flex-gallery img {
+  width: calc(33.333% - 10px); /* 3개씩 정렬 */
+  max-width: 600px; /* 최대 크기 제한 */
+  height: 800px;
+  object-fit: cover; /* 비율 유지하면서 잘라서 맞춤 */
+    display: block;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .flex-gallery img {
+    width: calc(50% - 10px); /* 화면이 작으면 2개씩 */
+  }
+}
+
+@media (max-width: 400px) {
+  .flex-gallery img {
+    width: 100%; /* 화면이 더 작으면 한 줄에 하나 */
+  }
+}
+
+body {
+    color: #19362d;
+}
+a {
+    text-decoration: none; /* 링크 밑줄 없애기 */
+    color: inherit; /* 링크 색상을 부모 요소와 동일하게 유지 */
+}
+a:visited {
+    color: inherit; /* 방문한 링크 색상도 변경하지 않도록 */
+}
+    </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <h2><a href="index.html">Eio<br> Portfolio</a></h2>
+    <ul class="menu">
+        <li><a href="about.html">About</a></li>
+<li class="dropdown">
+    <a href="archive.html" class="dropbtn">Archive</a> 
+    <div class="dropdown-content">
+        <a href="illust.html">일러스트</a>
+        <a href="3grade.html">3학년</a>
+        <a href="2grade.html">2학년</a>
+        <a href="1grade.html">1학년</a>
+    </div>
+  </li>
+    </li>
+      <li><a href="gp.html">졸업프로젝트</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h1>주제 리서치</h1>
+    <p>개인 프로젝트</p></div><br><br>
+  <p style="font-weight: bold;">뮤직비디오 역사와 발전</p><br>
+    <p><li>1981년 MTV 개국 이후로 뮤직비디오의 영향력 증가 본격적인 '영상음악'의 전성기 시작</li><br>
+    <li>2000년대 이후 유튜브 등의 동영상 플랫폼을 통한 확산</li><br><img src="https://i.namu.wiki/i/HTD6xwaxhi_v1mrLrvKj4zwAvz-fWujd7rGORQEH8pmbxAkLnwNtn0r3yx4RrdqXaip5LeZWyMjCqFWUsveaCA.svg"><br><br>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1024px-Logo_of_YouTube_%282015-2017%29.svg.png"><br><br><br><br><br><br>
+    <p style="font-weight: bold;">뮤직비디오의 활용</p><br>
+<p>현대의 뮤직비디오는 예술적인 목적과 함께 주로 음반 판매를 늘리기 위한 마케팅목적으로 사용된다</p><br><br><br><br>
+<p style="font-weight: bold;">장르별 뮤직비디오 특징분석</p><br>
+<p><li>힙합: 빠른 컷 편집, 럭셔리한 배경, 강렬한 퍼포먼스</li><br>
+    <li>팝: 감성적인 스토리텔링, 비주얼 중심 연출</li><br>
+   <li> 록/메탈: 어두운 톤, 강렬한 연출과 밴드 퍼포먼스</li><br>
+    <li>K-POP: 화려한 색감, 군무, 트렌디한 연출 기법</li><br><br><br><br><br>
+
+    <p style="font-weight: bold;">힙합 뮤직비디오 제작과 아티스트 브랜딩에 큰 영향을 미친 회사와 디렉터들</p><br>
+    <p><li>Lyrical Lemonade(Cole Bennett)<br></li><img src="https://i.ytimg.com/vi/mzB1VGEGcSU/maxresdefault.jpg"><img src="https://i.ytimg.com/vi/eWAdpUyzCkI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDACVhYU07Nv_HH5B8hj401ASI3vw">
+       <br> <p>대표적인 힙합 뮤직비디오 프로덕션 회사<br>
+            트렌디한 색감, 빠른 컷 편집, 만화적 요소를 활용한 스타일이 특징<br>
+            Lil Durk, Juice WRLD, Eminem, Jack Harlow, NLE Choppa 등 수많은 래퍼들과 작업<br>
+            대표작: Juice WRLD - "Lucid Dreams", Eminem - "Godzilla", Lil Durk - "All My Life"<br><p a href="https://www.lyricallemonade.com/">lyrical lemonade</p><br><br>
+<li>Tanu Muino</li><img src="https://www.billboard.com/wp-content/uploads/2021/12/Doja-Cat-Woman-screenshot-2021-billboard-1548.jpg?w=1024"><img src="https://i.ytimg.com/vi/14TVi51-bgc/maxresdefault.jpg">
+<p>비주얼적으로 강렬한 스타일, 대형 퍼포먼스 연출<br>
+    힙합뿐만 아니라 팝 뮤직비디오도 많이 제작<br>
+    대표작: Cardi B - "Up", Lil Nas X - "Montero", Doja Cat - "Woman"<br><br><br>
+
+    <li>Gibson Hazard</li><img src="https://i.ytimg.com/vi/UhbixyxgsiU/maxresdefault.jpg"><img src="https://i.ytimg.com/vi/G6xgMW7U0aY/maxresdefault.jpg">
+<p>다이내믹한 편집과 3D 효과를 활용한 영상 스타일<br>
+투어 다큐멘터리 형식의 뮤비도 잘 만듦<br>
+대표작: Future - "712PM", Lil Uzi Vert - "Just Wanna Rock"</p><br><br><br><br>
+
+    </p>
+  </div>
+</body>
+</html>
