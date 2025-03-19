@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네비게이션 바</title>
+  <style>
+    body {
+  background-color: #Eff7f6;
+  text-align: center;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 네비게이션 바 스타일 */
+    .navbar {
+      position: fixed; /* 화면 상단에 고정 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #eff7f655;
+      padding: 25px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #006064;
+      font-family: Arial, Helvetica, sans-serif
+    }
+
+    
+
+    /* 메뉴 스타일 */
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: clamp(16px, 5vw, 44px);
+    
+    }
+
+    .menu li {
+      display: inline;
+    }
+
+    .menu a {
+      color: #006064;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: clamp(14px, 3vw, 18px);
+    }
+
+    .menu a:hover {
+      color: #ff5ba8;
+      text-decoration: none;
+    }
+
+
+    li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    
+    /* 본문 내용 스타일 */
+    .content {
+      margin-top: 100px; /* 네비게이션 바 높이만큼 여백 */
+      padding: 30px;
+      text-align: center;
+    }
+
+    h2 {
+        font-size: 28px;
+        text-decoration: none;
+        
+    }
+    p {
+        text-align: center; 
+        line-height: 1.8;
+    }
+    li {
+        text-align: center; 
+    }
+
+    img {
+  display: block;
+  margin: auto;
+  width: 60%; /* 크기 조절 (원하는 값으로 변경 가능) */
+  max-width: 800px; /* 최대 크기 제한 */
+  height: auto; /* 비율 유지 */
+}
+
+.flex-gallery {
+  display: flex;
+  flex-wrap: wrap; /* 화면 크기에 따라 줄 바꿈 */
+  justify-content: center; /* 중앙 정렬 */
+  gap: 8px;
+  padding: 20px;
+  
+}
+
+.flex-gallery img {
+  width: calc(33.333% - 10px); /* 3개씩 정렬 */
+  max-width: 600px; /* 최대 크기 제한 */
+  height: 800px;
+  object-fit: cover; /* 비율 유지하면서 잘라서 맞춤 */
+    display: block;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .flex-gallery img {
+    width: calc(50% - 10px); /* 화면이 작으면 2개씩 */
+  }
+}
+
+@media (max-width: 400px) {
+  .flex-gallery img {
+    width: 100%; /* 화면이 더 작으면 한 줄에 하나 */
+  }
+}
+
+body {
+    color: #19362d;
+}
+a {
+    text-decoration: none; /* 링크 밑줄 없애기 */
+    color: inherit; /* 링크 색상을 부모 요소와 동일하게 유지 */
+}
+a:visited {
+    color: inherit; /* 방문한 링크 색상도 변경하지 않도록 */
+}
+    </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <h2><a href="index.html">Eio<br> Portfolio</a></h2>
+    <ul class="menu">
+        <li><a href="about.html">About</a></li>
+<li class="dropdown">
+    <a href="archive.html" class="dropbtn">Archive</a> 
+    <div class="dropdown-content">
+        <a href="illust.html">일러스트</a>
+        <a href="3grade.html">3학년</a>
+        <a href="2grade.html">2학년</a>
+        <a href="1grade.html">1학년</a>
+    </div>
+  </li>
+    </li>
+      <li><a href="gp.html">졸업프로젝트</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h1>2주차</h1>
+    <p>개인 프로젝트</p></div><br><br>
+  <p style="font-weight: bold;">게임 개발프로세스 리서치</p><br>
+    <img src="img/게임 기획서 종류.png"><br><p>제안서</p>
+    <img src="img/제안서.png"><br><br><br>
+    <p>1. 개요<br>
+        개요는 말 그대로, 게임을 함축해서 나타내는 것이다.<br>
+        게임의 제목, 장르, 그래픽, 권장사양, 플랫폼 등을 요약해서 정리하고, 어떤 게임인지 대략적으로 알 수 있어야 한다.<br>
+        기획의도도 포함되면 좋다.<br><br><br>
+        2. 전망
+        전망은 이 게임의 가능성을 보여주는 것이다<br>
+        이 게임이 어떤 방식으로 플레이 되는지 설명하고, 이 게임에 사용된 새로운 기술이나 특징을 설명한다.<br>
+        이 부분에서는 마치 이미 출시된 게임을 홍보하듯 설명하는 것이 좋습니다. 흥미를 끌고, 특징을 요약할 수 있는 주제 문장을<br>
+        작성하고 그 아래 세세한 설명을 붙인다. 마치 신문기사를 쓰듯이 커다란 주제문장을 달고, 그 아래 기사를 쓰듯 설명을 쓰는 것이다.<br> 
+        그 다음엔 이러한 방식의 게임이 왜 가능성 있고 유망한지 객관적인 데이터를 제시한다.<br> 
+        또한 비슷한 시기에 출시될 가능성이 있는 비슷한 게임들을 분석하고 어느 정도 경쟁력이 있는지 설명한다.<br> 
+        이 부분에서는 신뢰할 수 있는 설문조사 결과를 예로 들거나, 공신력 있는 매체의 기사 등을 이용하는 것이 좋다.<br><br><br>
+        3. 방향<br>
+        게임의 방향을 설정한다. 장르, 게임의 분위기, 게임의 요소들을 구체적으로 설명한다.<br>
+        게임의 포지셔닝, SWAT 분석, 경쟁요소 등이 포함되며<br>
+        이것은 게임을 만들어갈 때 팀원 모두가 머릿속에 두어야 할 일종의 테마가 될 것 이다.<br><br><br>
+        4. 주요 시스템<br>
+        청중이 투자자나 사장이라면 유료시스템이 되면 좋다.<br>
+        그 외 게임의 근간을 이루는 핵심시스템을 설명한다.<br>
+        Ex1. 카트라이더: 드리프트 시스템, 스피드전 아이템전, 카트교체.<br>
+        Ex2. 아이온: 진형 시스템, 비행&활강 시스템<br><br><br>
+        5. 스케줄<br>
+        게임 제작에 걸리는 시간을 도표로 작성한다.<br>
+        대략적인 컨텐츠 흐름대로 작성하면 보기 좋으며, 예산과 함께 적는 경우도 많다.<br><br><br>
+        6. 팀<br>
+        게임제작에 필요한 인원구성을 작성하며, 조직도를 많이 사용한다.<br>
+        예산과 함께 적는 경우도 많다.<br>
+        이미 팀이 셋팅 되어 있으면 조직도로, 팀이 덜 셋팅 되어 있으면 필요한 팀원과 연봉 등을 산출한다.<br>
+        7. 예산<br>
+        게임을 제작하기 위한 최소예산/ 최대예산을 측정한다.<br>
+        인건비, 엔진비용, 외주비용, 사운드비용 등이 기재된다.<br><br><br>
+        8. 매출<br>
+        게임이 완성되는 시기부터, 수익예상 ARPU, 손익분기점 시기 등을 예상하며
+        목표매출을 산출한다.<br><br><br>
+        <p>게임 개발 프로세스의 이해</p><br>
+        게임 개발 프로세스는 크게 3단계로 나누어 볼 수 있습니다.<br>
+        어떤 게임을 만들 것인가에 대한 결정과 상세적인 기능들을 정의하는 프리 프로덕선(Pre-Production), <br>
+        실제로 게임을 구성하는 요소들을 만들고 통합하는 프로덕션(Production) 그리고 오류 수정 및 가능한 조건들을 <br>
+        고려하여 게임의 성능과 가치를 높이는 포스트 프로덕션(Post-Production) 단계로 구분됩니다. <br>
+        참고로 기획(Design)은 기획자만 하는 것은 아닙니다. 프로그래머나 그래픽 디자이너도 자신들의 작업을 시작하기전 <br>
+        자신들의 작업을 어떻게 펼쳐갈 것인지에 대한 설계를 우선적으로 하게 됩니다. <br>
+        단지 그 기획(설계)의 내용이 다를 뿐인데 결정된 계임 기획의 목적과 의도에 부합하도록 <br>
+        프로그래머와 아티스트 역시 자신들 업무에 대한 기획을 수행하게 됩니다.</p><br><br><br>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWmEYK3l_6JAKFnpmD-6gLzpNY8W0kLCgp2H9Bl0HxXiUf77TqIRpp9uG2U67AjZM_-JpOkKUSYd0ab6Vm2yUq24sG23ShznjGR5lEO8KX3S6JaBoekS1BzJ7035F7g3M1iZHgk_KiLt0/s1600/DevProcess02.JPG">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgI37ZrDhcc4C4l1FyfX0DdvQf3e4-WKHnsxB21HmVkmP8xEqh4uFmsvSEQ8of_vdbib6buzLbJ34WCK7eWztCaL5BfCzlbeJ5icORGz6kVDWCJUnUR8bnfNdMc1AL4Sd3DKW5fzU8V5Yo/s1600/DevProcess01.JPG">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFya2EDDjMxh5o9QB60aiurvHQU4R5emPDOUwwf3eXfsU6NoVgAPpO_iTNwjH3srSFj_32ilCtta8S7V8NJqntAZ6kw6rulrowj7-D-Q2H5LVi8OanaxGwD410LF_kdvYguSIdgiotOEI/s1600/DevProcess03.JPG">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnct8YbNwnm0L1s7snSp2jlsUsGxx50B6T8hlgD7nkbo5_hZEtfXse3_jKjMsdXEXrzL8DPNebQqPnt6kSmJ_6MzQ-jqbqRycocjNsQgj7_jw_Micov7KxOtDqRQS-nJRHRdLx5o8F7-U/s1600/DevProcess04.JPG">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhO9ev9QKSW9XknNL2_eZBRL61OxdgchAbVExZ0-1wcJzy8mxopR-H8yw8NovWaTqPZPyFfYApkm5WdvnQygkG5gPckobZrZp1dlM4qcwInLWIaAef2lKxAqA1Tc3ONtGcf8YrSbK0XKCg/s1600/DevProcess05.JPG">
+        </p>
+        <p>출처:https://blog.naver.com/onlybest01/220080008810</p>
+</body>
+</html>
