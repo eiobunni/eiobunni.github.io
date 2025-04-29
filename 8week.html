@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8week</title>
+  <style>
+    body {
+  background-color: #Eff7f6;
+  text-align: center;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 네비게이션 바 스타일 */
+    .navbar {
+      position: fixed; /* 화면 상단에 고정 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #eff7f655;
+      padding: 25px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #006064;
+      font-family: Arial, Helvetica, sans-serif
+    }
+
+    
+
+    /* 메뉴 스타일 */
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: clamp(16px, 5vw, 44px);
+    
+    }
+
+    .menu li {
+      display: inline;
+    }
+
+    .menu a {
+      color: #006064;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: clamp(14px, 3vw, 18px);
+    }
+
+    .menu a:hover {
+      color: #ff5ba8;
+      text-decoration: none;
+    }
+
+
+    li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    
+    /* 본문 내용 스타일 */
+    .content {
+      margin-top: 100px; /* 네비게이션 바 높이만큼 여백 */
+      padding: 30px;
+      text-align: center;
+    }
+
+    h2 {
+        font-size: 28px;
+        text-decoration: none;
+        
+    }
+    p {
+        text-align: center; 
+        line-height: 1.8;
+    }
+    li {
+        text-align: center; 
+    }
+
+    img {
+  display: block;
+  margin: auto;
+  width: 60%; /* 크기 조절 (원하는 값으로 변경 가능) */
+  max-width: 800px; /* 최대 크기 제한 */
+  height: auto; /* 비율 유지 */
+}
+
+.flex-gallery {
+  display: flex;
+  flex-wrap: wrap; /* 화면 크기에 따라 줄 바꿈 */
+  justify-content: center; /* 중앙 정렬 */
+  gap: 8px;
+  padding: 20px;
+  
+}
+
+.flex-gallery img {
+  width: calc(33.333% - 10px); /* 3개씩 정렬 */
+  max-width: 600px; /* 최대 크기 제한 */
+  height: 800px;
+  object-fit: cover; /* 비율 유지하면서 잘라서 맞춤 */
+    display: block;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .flex-gallery img {
+    width: calc(50% - 10px); /* 화면이 작으면 2개씩 */
+  }
+}
+
+@media (max-width: 400px) {
+  .flex-gallery img {
+    width: 100%; /* 화면이 더 작으면 한 줄에 하나 */
+  }
+}
+
+body {
+    color: #19362d;
+}
+a {
+    text-decoration: none; /* 링크 밑줄 없애기 */
+    color: inherit; /* 링크 색상을 부모 요소와 동일하게 유지 */
+}
+a:visited {
+    color: inherit; /* 방문한 링크 색상도 변경하지 않도록 */
+}
+    </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <h2><a href="index.html">Eio<br> Portfolio</a></h2>
+    <ul class="menu">
+        <li><a href="about.html">About</a></li>
+<li class="dropdown">
+    <a href="archive.html" class="dropbtn">Archive</a> 
+    <div class="dropdown-content">
+        <a href="illust.html">일러스트</a>
+        <a href="3grade.html">3학년</a>
+        <a href="2grade.html">2학년</a>
+        <a href="1grade.html">1학년</a>
+    </div>
+  </li>
+    </li>
+      <li><a href="gp.html">졸업프로젝트</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h1>8주차</h1>
+    <p>개인 과제</p></div><br><br>
+    <h1>🎮 Apple Design Awards 2024 수상작 조사 - 게임 부문</h1><br>
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c0/82/dc/c082dc5a-ee54-d87f-4d37-69aba4bc09c7/PlayerIcon.png/460x0w.webp" style="width: 200px; height: auto;"><br>
+
+    <div class="section">
+      <p><strong>부문:</strong> 포용성 (Inclusivity)<br />
+      <strong>게임 제목:</strong> <span class="highlight">Crayola Adventures</span><br />
+      <strong>개발사:</strong> RED GAMES CO, LLC<br />
+      <strong>플랫폼:</strong> Apple Arcade<br />
+      <strong>연령 등급:</strong> 4세 이상</p>
+    </div>
+    <br><br>
+    <div class="section">
+      <h2>🏆 수상 이력</h2>
+      <ul>
+        <li>2024 Apple Design Awards – 포용성 부문 수상</li>
+        <li>2024 NYX Game Awards – 모바일 게임 부문 수상</li>
+      </ul>
+    </div>
+    <br><br>
+    <div class="section">
+      <h2>🎨 게임 개요</h2>
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/bb/1d/c6/bb1dc686-38c3-e0ad-1827-bd06d634847c/CA-S04-MacOS.png/626x0w.webp" style="width: 500px; height: auto;"><br>
+      <img src="https://images.squarespace-cdn.com/content/v1/5d8d3dfbe4f1ce39ccfb95c0/6abe74d2-e4f9-4b5a-9237-01e14e5adf8d/CrayolaAdventures_6444109249_20240205_CharacterCreator_03_2208x1242.png?format=1500w" style="width: 500px; height: auto;">
+      <p>Crayola Adventures는 아이들이 직접 이야기를 만들고, 캐릭터를 꾸미며,<br> 
+        창의적으로 세계를 구성하는 스토리텔링 어드벤처 게임입니다.<br> 
+        플레이어는 락 밴드를 만들거나, 우주를 탐험하거나, 악당 진이를 친구로 만들거나,<br> 
+        상상력 가득한 다양한 모험을 펼칠 수 있습니다.</p>
+    </div>
+    <br><br>
+    <div class="section">
+      <h2>👩‍👧‍👦 포용성과 안전성</h2>
+      <ul>
+        <li>다양한 피부색, 헤어스타일, 의상, 소품으로 나만의 캐릭터 만들기</li>
+        <li>모든 연령대가 즐길 수 있는 직관적인 인터페이스</li>
+        <li>광고 및 인앱 구매 없음</li>
+        <li>가족이 함께 플레이 가능</li>
+        <li>COPPA 및 GDPR 준수로 아동의 개인정보 안전하게 보호</li>
+      </ul>
+    </div>
+    <br><br>
+    <div class="section">
+      <h2>📚 교육적 효과</h2>
+      <ul>
+        <li>읽기, 쓰기, 스토리텔링 능력 향상</li>
+        <li>문제 해결 능력과 창의력 발달</li>
+        <li>음성 내레이션 기능으로 다양한 읽기 수준의 사용자도 참여 가능</li>
+        <li>디지털 드로잉 도구를 통한 미술 활동과 소근육 발달</li>
+      </ul>
+    </div>
+    <br><br>
+    <div class="section">
+      <h2>🧠 디자인 우수성</h2>
+      <ul>
+        <li>디지털 Crayola 도구를 이용한 고품질 창작 경험 제공</li>
+        <li>사용자의 선택으로 매번 달라지는 이야기 전개 구조</li>
+        <li>시각적으로 따뜻하고 친근한 그래픽 스타일</li>
+        <li>정기적인 콘텐츠 업데이트로 지속적인 흥미 유발</li>
+      </ul>
+    </div>
+    <br><br>
+    <div class="section">
+      <h2>🌱 개발사 정보</h2>
+      <p><strong>RED GAMES CO.</strong>는 부모와 교육 전문가들로 구성된 스튜디오로, 어린이의 창의성과 재미를 중심으로 한 고품질 앱을 제작합니다.<br/>
+      - 2024년 Fast Company 선정 게임 분야 가장 혁신적인 기업 <strong>7위</strong></p><br>
+      <a href="https://www.redgames.co/">*RED GAMES CO. 주소 클릭하세요!*</a>
+    </div>
+    <br><br>
+</body>
+</html>
