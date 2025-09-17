@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네비게이션 바</title>
+  <style>
+    body {
+  background-color: #Eff7f6;
+  color: #19362d
+  
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 네비게이션 바 스타일 */
+    .navbar {
+      position: fixed; /* 화면 상단에 고정 */
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: transparent;
+      padding: 25px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #006064;
+      font-family: Arial, Helvetica, sans-serif
+    }
+
+    
+
+    /* 메뉴 스타일 */
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: clamp(16px, 5vw, 44px);
+    
+    }
+
+    .menu li {
+      display: inline;
+    }
+
+    .menu a {
+      color: #006064;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: clamp(14px, 3vw, 18px);
+    }
+
+    .menu a:hover {
+      color: #ff5ba8;
+    }
+
+    li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  color:#006064;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #006064;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    
+    /* 본문 내용 스타일 */
+    .content {
+      margin-top: 100px; /* 네비게이션 바 높이만큼 여백 */
+      padding: 200px;
+      text-align: center;
+      line-height: 200%;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    a {
+    text-decoration: none; /* 링크 밑줄 없애기 */
+    color: inherit; /* 링크 색상을 부모 요소와 동일하게 유지 */
+}
+
+a:visited {
+    color: inherit; /* 방문한 링크 색상도 변경하지 않도록 */
+}
+h1 {
+  font-size: 120px;
+}
+h1:hover {
+  color: #ff5ba8;
+}
+    </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <h2><a href="index.html">Eio<br> Portfolio</a></h2>
+    <ul class="menu">
+        <li><a href="about.html">About</a></li>
+<li class="dropdown">
+    <a href="archive.html" class="dropbtn">Archive</a> 
+    <div class="dropdown-content">
+        <a href="illust.html">일러스트</a>
+        <a href="3grade.html">3학년</a>
+        <a href="2grade.html">2학년</a>
+        <a href="1grade.html">1학년</a>
+    </div>
+  </li>
+    </li>
+      <li><a href="gp.html">졸업프로젝트</a></li>
+      <li><a href="gp2.html">졸업프로젝트2</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h2>2주차 진행상황</h2><br><br>
+    <p style="font-weight:700;">UI개선- 1.메인메뉴</p><br>
+    <img src="img/졸프2/Hovering_Mainmenu.png" width="1200", height="600">
+
+    <video src="img/졸프2/Hovering_Main.mp4" controls width="1200", height="600"></video>
+    <br><p>Hovering 게임 시작 화면이다. 타이틀과 플레이 옵션 나가기 버튼이 자리해있다.</p>    
+    <p>마우스를 가져다대면 버튼이 빨갛게 활성화된다</p><br><br>
+    <p style="font-weight:700;">2. 캐릭터의 스테이터스 창</p>
+    <p>플레이어 캐릭터인 Elena의 체력, 스테미나를 확인할 수 있다.</p>
+    <img src="img/졸프2/Elena_UI.png" width="1200", height="600">
+    <p>상태창 Before&#40;왼쪽&#41; &#47; After&#40;오른쪽&#41;</p>
+    <img src="img/졸프2/Before_Stats.png" width="600">
+    <img src="img/졸프2/Elena_Health_Stamina.png" width="600">
+    <p>캐릭터 스텟창 확대</p><br><br>
+    <br><p style="font-weight:700;">3.지하실 프랍 제작 중</p>
+    <p>Basement</p>
+
+    <img src="img/졸프2/Columm_example_image.png" width="1200", height="600">
+    <p> &#60; 기둥 Column &#62;</p><br>
+    <img src="img/졸프2/Basement_Lamp_Image.png" width="1200", height="600">
+    <p>&#60; 지하실 조명 Lamp &#62;</p><br>
+    <p style="font-weight:700;">4. 다이얼로그 시스템 추가</p>
+    <img src="img/졸프2/Dialogue1.png" width="1200", height="600">
+    <img src="img/졸프2/Dialogue2.png" width="1200", height="600">
+    <p>특정오브젝트를 조사하면 주인공의 시선에서 해석된 문구가 표시되어 몰입감을 강화한다.</p>
+
+
+
+
+
+
+  </div>
+</body>
+</html>
